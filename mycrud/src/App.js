@@ -38,7 +38,9 @@ function App() {
     const selectedUser = userdata.find((x,i) => i == index);
     setUser(selectedUser);
     setEditIndex(index);
-    onOpenModal(); 
+    onOpenModal();
+     
+  
   }
 
   const updateUser = () => {
@@ -114,7 +116,6 @@ function App() {
           <textarea name="" id="" value={user.address} cols="30" rows="5" onChange={(e) => setUser({...user,"address":e.target.value})}></textarea> */}
           {action == 'Add' && <button className='btn' onClick={() => addUser()}>Submit</button>}
           {action == 'Edit' && <button className='btn' onClick={() => updateUser()}>Update</button>}
-
         </div>
       </Modal>
     </div>
