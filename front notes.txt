@@ -1,0 +1,32 @@
+Tag:refers to a special word rapped in angular brackets which are used  to define a particular contentin a webpage
+------------------------------------------------------------------------
+ html element : html element is the collections of starts types and attribute table is a set of elements thats allows the data into rows and coloms.
+--------------------------------------------------------------------
+html class:html class attribute  is use to specify a sigle are multiple class names for an html elements
+the class name is use by css and javascript totask for html elements 
+html class:
+is use to simply single or multiple class name for in html elemen the class name can be used by css and js to do some task for html element
+use .dot symble to appling css to class	 
+----------------------------------------------------------------
+html id attribute :  id ,class,src basically known as attribute it is use to identify and change a particular time we have many attributes 
+<p id="one">paragra</p>
+here id is attribute
+use #symble while appling css to id
+example of empty element is break tag, img tag
+----------------------------------------------------------
+Table: is a set of data elements allows us to store a represent data in a rows and columns. table contains of rows and columns we can also represrnt ay kind of data like,text,links,images etc
+caption for adding name to the table
+-------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+

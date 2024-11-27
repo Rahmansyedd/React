@@ -1,0 +1,176 @@
+sql
+----
+create database age;
+drop database age;  => to delete database
+drop database if exists age;
+use college => which database you want to use
+CREATE DATABASE if not exists college; => for creating database without error if the data base is already eXist
+show database;=> to show all database
+
+tables in sql
+-------------
+use college;
+
+creat table student(
+);
+using numbers use int primary key
+varchar is use to number of words we write
+ 
+for inserting data in to database:
+insert into student values(1,"aman",24);
+
+for print or seeing table
+select *from student
+----------
+data type in sql
+char- it will reserve hole space for pune////char(50)
+varchar- will take how much space it want for pune////varchar(50)
+blob - it can store large binary objects////blob(1000)
+int - for storung integet valuse will use int//////int
+tinyint-small verssion og int /////tinyint
+bigint- big version of int ////bigint
+bit - can store x-bit values x range from 1 to 64 ie:bit(2)can store only 2 values , bit(3) we can store 3 values.
+float - for storing decimal values :-12.5////float
+double - for storing big  decimal numbers////double
+boolean - for storing true or false values are 0 or 1///boolean
+for useing boolean first will use tinyint bcoz in tiny int zero will store
+date - wil store dates////date
+year - will store year /////year	
+-------------------------------------
+sql datatypes:
+signed :means both the numeric  values positive and negative  wil come in signed
+-------
+ unsigned :in this all posituve will come for example salary and age.
+
+------------------------------------
+sql commands:
+DDL{data defination language}:creat ,alter,remane, truncate & drop
+DQL:data query language:select;
+DML:data manipulattion language :insert update delete
+DCL:data controle language: grant 7revoke premision to users
+TCL transaction controle language:start transaction,commit, rollbacks
+---------------------
+table related queries:
+creat table student(
+rollno int primary key, name varchar(50));
+----------------------------------
+for inserting data into table :
+insert into student
+(rollno, name)values(101,"kiran"),(102,"arjun")
+for inserting  one value we can use: insert into student values (104,"shyam");
+--------------------------------------
+keys:special coloms are called keys two types of keys are there primary kry and foreign key 
+primary key : means it uniquely identifi the id in table rows there is only one primary keyit will not null
+foreign key  : is the set of colums or set of columns in a table that reffers to the primery key there is multiple foreign keys
+-------------------------
+constraints: sql constraints are used to specify rules for data in a table
+not null : cloumn cannot have a null value{col1 int not null}
+unique : all values in column are different{col2 int unique} 
+foreign keys:prevent actions that would destroy links between tables
+---------------
+default constrains:addd salary defaulty
+create table emp(
+id int ,
+salary int default 25000
+);
+
+insert into emp (id) values(101);
+-------------
+check:it can limit the values allowed in a coloumn
+create table city(id int primary key,city varchar(50),age int,constraint age_check check (age>=18and city ="hyd"));
+------------------------------------
+select details:
+use to select any data from the database
+select distinct,name, marks from student;
+distinct means select only unique cities
+-----------------------------
+ where clause:to define some conditions
+select * 
+from student
+where marks >80;
+======
+select * 
+from student
+where marks>80 and city="Hyderabad";
+operators in where:
+arthmwtic operator:addition subtraction multiplication division modulus
+comparasion operator:equla to ,notequal to,>,>=,<,<=
+logical operatirs:and or not in between all like any
+bitwise operator:&(bitwist),(bitwise or)
+--------------------------
+limit clause:sets an upper limit on number of (tuples) rows to be returned
+select * 
+from student 
+limit 3;
+--------------------------------
+order by clause:
+to store in ascending or descending order
+------------------------------
+aggregate function:-perform a calculation on a set of values and a single values ,,,count() max(),min(), sum(), avg().
+select max(marks) 
+from student;
+select count(rollno) 
+from student;
+-----------------------------
+group by clause:
+it groups rows that have the same value into summary rows it collect data from multiple records the result by one or more column.
+select city ,count(rollno)
+from student
+group by city;
+-----------------
+having clause:similar to where applies some conditionds on rows used when we want to apply any condition after grouping
+select city, count(rollno)
+ from student
+group by city
+having max(marks) > 90;
+----------------
+general order :
+
+select city, count(rollno)
+from student
+where grade = "A"
+group by city
+having max(marks) > 93
+order by city desc 
+--------------------------
+table related queries:
+UPDATE:
+use to updating the rows in a table
+
+before updating have to write a comments 
+SET SQL_SAFE_UPDATE=0;
+to avoid 117 error 
+update student
+set grade = "O"
+where grade = "A";
+
+DELETE:
+uset o delete existing  row
+delete from student
+ where marks <33;
+---------------------------------------------------------------------------------------
+revisiting foreign key:
+
+cascading for FK: 
+on delete cascadnig :when we crate a foregin key using this option,it deletes the referance rows in the child table whem the referance row is deleted in the parent table which has a primary key
+
+on update cascading:
+when we crate a fk usong update cascade the referance roes are in the child table when the refereace row os updated in the parent table which has a primary key
+
+
+
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin
+
+
+
+
+
+
+
+
+
+
+
+
+

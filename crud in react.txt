@@ -1,0 +1,89 @@
+crud in react:
+------------------
+1.npx create-react-app CRUD
+2.CD CRUD
+3.install npm i --save react-feather react-responsive-modal
+4.npm start
+5.in app.js import react-responsive-modal/styles.css
+import {PlusCircle,Edit,Trash2} from 'react-feather'
+****6.if react app is showing issue of packages the use this =>npm install -g create-react-app@latest*******
+7.div.d.flex  is for  <div className="d-flex"></div
+8.work on app.js part
+9.add div h1 button tags
+10.add hr tag
+11. add table
+how to create modal in react:
+12.in app.js we have to add modal
+import { Modal } from 'react-responsive-modal';
+13.and add use state 
+const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+14. add modal body area 
+<Modal open={open} onClose={onCloseModal} center>
+        <h2>Simple centered modal</h2>
+ </Modal>
+15. in adduser button add onclick finction
+    <button className="btn"onClick={onOpenModal}>
+16.define usestate
+17.in model will add h2 and will use lable and input tages to form
+18.add submit button
+NOW SAVE FORM  input VALUES:
+19.add use state 
+const [user, setUser] = useState();
+20.we have to initialize 
+function App() {
+
+  const blankUser={
+
+    "firstName":"",
+    "lastName":"",
+    "eamil":"",
+    "userRole":"" 
+  }
+21.if we want default value of blankuser the will add blankuser in usestate
+22.wil take another variable usestate, for saving all user dat we are adding this
+ const [userdata, setUserdata] = useState([]);
+and will initializes  with single array
+23. go to submit button and add onclick function=> onClick={()=>addUser()}
+after doing this define add user 
+ const addUser =()=>{
+    setUserdata([...userdata,user])     =>for adding the old and new user,when user click the adduser button what ever user data is there we have to set that existing user and new user
+    setUser(blanKUser)                  => for resetting the form
+    onCloseModal()                      =>for closing the popup
+  }
+
+24. add  <p>{JSON.stringify(userdata)}</p>after adduser in modal and upside the table
+25. the go to input field in modal and add onchange function  => <input type="text" onChange={(e)=>setUser({...user,"firstName":e.target.value})}/>
+
+NOW WILL DO EDIT FUNCTION:
+
+26.first we have to take variable usestate
+const [action, setAction] = useState();
+  const [editindex, setEditindex] = useState(null);
+
+27.go to edit button and add onchange function
+ <button className="btn m12"ONCLICK={()=>edituser()}>
+and define edituser function
+ const edituser = (index)=>{
+setaction('edit')
+ onOpenModal();
+
+  }
+28.come to table body and add  =>{userdata.length>0 &&userdata.map((user,index)=>{brakets})} and the all tr in the brakets
+29.do the table in dynamic way =>    <td>{user.firstName}</td>
+                <td>{user.lastName}</td>
+                <td>{user.eamil}</td>
+                <td>{user.userRole}</td>
+
+30.add the index in button onchange =>   <button className="btn m12" onChange={() => edituser(index)}>
+ now define edit user see 27 point
+
+31 go to modal and add{'action'} in h2 tag
+32. go to submit button and one more submit because add submit button will not work for edit
+ {action == 'Add' && <button className="btn" onClick={() => addUser()}>Submit</button>}
+          {action == 'Edit' && <button className="btn" onClick={() => updateuser()}>update</button
+
+33.
+

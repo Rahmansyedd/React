@@ -1,0 +1,176 @@
+git and git hub
+------------------
+git:version control system is a tools that helps to track changes in code
+-------------------------
+github:website that allows developers to store and manage their code using git
+
+folder is call repository in git lang
+
+in git hub for changes we call commit
+commit means :it save our history
+------
+commands:
+ ls -a: show all folders in git
+clear:to clear
+pwd:shows working directory 
+git clone+ url20to tie githib to vs code
+cd :means change directory
+ls -a:for seeing hidden files
+git status: to see ststus
+add: adds new or changed file in your working directory to the git staging area. 
+git add:
+commit:  it is the record of change-----/git commit -m "add new para"////for fixing  =>git commit -m " fixed readme"
+git init--/ use to creat a new repo
+git remote add origin = url
+git remote origin push =to pust vs code to git
+cd ..=> to come out from directory
+mkdir localrepo: for making new directiry
+creat new repo in github 
+        |
+ run this command  => git remote add origin https://github.com/Rahmansyedd/localrepo.git
+
+for verifying remot => git remote -v
+
+git breanch=> use to verify which branch
+
+for remaning breanch => git branch -m main
+git puch -u origin main=>we want to perform our operation in main and we can use{git push}
+git pull origin main:use to download content from remote
+if we want to compare main branch with feature branch the use =git diffe main
+for merging two branches =git merge branch name
+
+resolving merge conflicts:
+an event that take place when git is unable to automatically resolve difference in code b/w two commits
+
+---------------------------------------
+work flow
+------
+github repos
+        |
+      clone
+        |
+    changeds
+       |
+      add
+       |
+    commit
+      |
+    push
+---------------------------------------------.
+git branches
+making a multiples coppy of project and start working on it
+and at last merging at main project 
+///////////
+branches commands:-
+git branch => to cheack branch
+git branch -m name => to rename branch
+git checkout  {branch name} 
+git checkout -b <-name
+git branch -d to delete branch 
+git branch new_branch
+---------------------------------------
+------------
+merging code
+way 1
+git diff{branch name}=>to compare commits branch files&more
+git merge branch name
+
+way 2
+creat pr(pull request)
+let you tell about changes you have push to a branch in a repo on github
+-------
+configureing git:
+git config --global user.name "Rahmansyedd"
+
+configureing git:
+git config --global user.email "syedrahman7218@gmail.com"
+
+for seeing setup
+ git config--list
+
+
+~ symble showcase we are in main folder
+
+--------------------------------------------------------------------
+untrack:new file that git doesn't yet track
+modified:chabged
+staged:file is ready to be committed
+unmodified : unchange-------------------------------
+
+undoing changes:
+case1:staged changes 
+git reset filename
+case-2 git reset  head~1:we are in commit 4 we want to go to commit 3 the we use this command
+git rewset --heard+hash number to remove all changes from git and vs code
+
+------------
+fork
+a fork is a new repository that shares code and visibility setting with the original upstream repository
+fork is rough copy
+----------------------------------------------------------
+---------------------------------------------------------------
+git init
+git add.
+git commit -m "file name"
+git remote add origin https://github.com/Rahmansyedd/projects.git
+gitf push -u origin main
+------------------------------------------------------------------
+
+for addin html css js project on git
+git clone https://github.com/Rahmansyedd/progress-steps.git
+move the all folders in to created file after readme file
+cd progress
+git add .
+git commit -m "deploy"
+git push
+-------------------------------------------------------------------------
+react projects:
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/<username>/<rep Name>.git
+git push -u origin main
+npm install gh-pages --save-dev
+"homepage": "https://<Username>.github.io/<Repository-name>"
+"scripts":{
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"}
+git add .
+git commit -m "commit"
+git push
+npm run deploy
+----------------------------------------------------------------------------
+if we got this error wile pushing in same repo
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Rahmansyedd/React.git'
+====> use this command===> 
+1. git fetch origin main:tmp
+
+2.git rebase tmp
+3. git push origin HEAD:main
+-------------------------------------
+
+how to deploye git hub pages:
+
+1.npm run build
+2.npm i gh-pages --save-dev
+3.git init
+4.git add .
+5. git status
+6.git commit -m "first commit"
+7.git branch -M main
+8.git remote add origin https://github.com/<username>/<rep Name>.git
+9.git push -u origin main
+10.go to git hub settings- pages-git source
+11.package.json before name add => "homepage":"https://rahmansyedd.github.io/React/"
+12.come in script line after start add "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
+13. in terminal npm run deploy
+----------------------------------------------------------------------
+
+
+
+
+
+

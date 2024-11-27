@@ -1,0 +1,405 @@
+filter document
+dynamic to react
+using react js what is the best way to intigrate dynamic 
+build react js sereen in model reven
+
+web pack:-
+--------	
+npm i --save-dev webpack-dev-server webpack-cli
+npm i --save-dev @babel/core babel-loader @babel/preset-env @babel/preset-react
+npm i  --save @babel/runtime
+npm i  --save-dev @babel/plugin-transform-runtime
+
+ npm run build
+npm install -g serve
+serve -s build
+ creat  2 file webpack.config.js & .babelrc
+***************************************************
+npm i webpack@2 -g
+
+webpack app\index.js dist\bundle.js
+webpack -w app\index.js dist\bundle.js
+------------------------------------------------------------------////////////////////////////////////////////////////////////////////
+
+*********************************************************************
+create react app
+----------------
+{npm srart} for running project's 
+*********************************
+creat a folder(react)
+      |
+go to website  creat  react app
+         |
+npx create-react-app my-app
+Npx 
+           |
+         enter
+========================================           
+strictmode
+----------------------------------
+npm start:to start react application
+              |
+     start editing in app.js
+              
+what is jsx?
+jsx is java script syntex extensions we can write html and javascript
+
+react will prefer camel case
+we have to use camel case wile adding bootstrap components
+ i.e.  in for case we have to write htmlFOR
+and in class case we have to write className
+--------------------
+jsx fragment means empty tags <> </>
+---------------------------
+for downloading node packages  use [npm i]
+================================================================
+lecture 6:-
+
+module:-
+------
+for exporting multi component from one module to other module use {}brackets 
+defind the value a,b,c
+for example 
+const a= syed; const b= rahman;const c= max  then export{a}; => in module1.js
+import {a,b,c} from 'module1.js' =>in module2.js
+---------------------
+props: is short for properties
+creat new folder name components
+                   |
+ and creat new file name navbar.js
+                 |
+react function base component {rfc}
+----------------------------------
+props: we r transferring components fron app.js [navbar to navbar.js]
+props types: it shows whar we are passing as a string if we pass num or pbj it will show error in console
+required: is for sowing this value is required we did not pass
+default props: is which value should use when we did not pass any value
+============================================================================================================
+lecture 7:-
+state: belongs  to component
+{usestate} is a hooks
+hooks means new addition to react
+note down=>const [text,setText]=usestate('enter text here ')
+===============================================================
+lecture 8:-
+word counter
+mx-2 for spacing
+my-2 for upper spacing
+=========================
+lecture 12
+***************************************************************
+***************************************************************
+*************************************************************
+code step by step
+
+what is react
+react is a library
+it is not a frame work 
+/////////////////////////////
+virtual dom
+DOM stands for ‘Document Object Model’. 
+virtual dome directly update compare to normal js
+
+install reactjs
+creat folder
+     |
+cmd open
+     |
+npx create-react-app my-app
+----------------------------------
+jsx: use to allow JavaScript  and html to use equally 
+life cycle method: use in class components there are many types of methods  most popular and useable methods  are constructor,componentdidmount,componentwillunmount,componentdidupdate
+----------------------------------
+----------------------------------------
+-----------------------------------------------
+react L-3
+-------
+how to creat react project:
+vite for easy installation 
+eraser
+how to use vite application with react 
+how to use react application
+npm run dev in vite application
+npm run start or npm run build in react application
+-----------------
+l-4
+react is a single page application because it has only one page that is index.html
+it is the dom notes of html it will remove the notes and inject the notes so that we dont have full page reload.
+----------------------
+l-5
+creat your own react library:
+-----------------------------
+l-6
+
+npm create vite@latest
+project name: project 
+react 
+JavaScript 
+
+state : is a unique thing in react
+any changes in states is retender the UI  in a web{i.e any change in a state it will rerender the web page}
+-------------------------------------------
+l-7 &l-8
+what is reconciliation
+the algorithm react uses the diff one tree with another to determine which part need to be change
+virtual  dom :
+fiber:
+props:
+parameters
+install tailwind in react:
+npm install -D tailwindcss postcss auto prefixer
+npx tailwindcss init -p
+
+tailwind is know as pre processor 
+Component bulding is known as dump component reason is its do sent take any parameters is not modifiable
+---------------------------------------------------
+l-9
+ const[color,setColor] = useState{'olive'}
+color is variable ,setcolor is method
+wich is responsible for changing the variable
+------------------------------
+l-10:
+use effect,useref,usecallback:
+Usecallback function:is a react hookthat lets you cache a function definition between re-render
+DSA:data secture and algorithm
+
+math.floor:classic technique of generating numbers between range X and Y(when we are making a dies roller etc)
+
+useeffect hooks:you want some thing happen as soon as component is loading the this hooks will use
+
+useref hooks:it is powerfull hook to grab anything from the window(we can also find out how many time the page is loaded 
+
+-------------------------------------------------
+l-11custom hooks in react:
+
+useid =type of hook use to generate new id
+qtYsXZ$6n
+-------------------------------------------
+l-12
+react router
+https://reactrouter.com/en/main
+https://tailwindcss.com/docs/guides/vite
+for install react router dom: npm i react-router-dom
+rfce
+params means we can extract some information like userid
+
+-------------------------------------------
+l-13 
+context apis in react
+one of the advance feature in react is how to handle the data
+one of the primary job of is to handle the reactions that's why we call it as react
+this reactions happens basically on two major factors first one is the props and the second one is state
+children is a genetic name what ever is coming we hve to pass  as it is
+prevent Default() :use to prevent value to go anywhere while clicking button	
+
+///////////////////////////////////
+////////////////////////////////////
+/////////////////////////////////////
+usestate() hooks: use to handle or manage state variables in our application
+i.e:const [counter, setCounter] = useState(0)
+by default value in use state is empty array([])
+-------------------------------------------
+context api: ite is a part of react hooks which allows to share state or data between component with out haveing pass it down through props manually
+------------------------------------------------------------------------------------------------------------
+
+l-14:
+why we create index.js file in context :because we will add all the data in the file and take what ever data we want from index file
+
+useEffect hooks:
+keys
+------------------------------------------
+l-15
+redux toolkit:
+redux: means
+skip lecture :15 and 16 i will do after complete
+------------------------------------------------------
+started 17: introduction
+l-18:
+full-stack application:
+do it the basic setup from tailwind
+and install npm i appwrite:it is pure front end its allows you to talk with backend part
+creat .env file in src folder
+setup appwirte
+create conf folder in src and creat conf.js file in it
+
+
+************************************
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------
+/**********************/*******************************/*
+1. login page with admin dashboard
+  crate vite app:npm init vite 
+                 
+2. instal bootstrap and  react-router-dom:
+   npm install bootstrap axios react-router-dom
+
+3. npm run  start
+
+4. in server terminal give path
+ cd server creat server app{node js}
+ open new terminal:npm init -y to creat packagejson file
+
+5. install express: which is the framework of node js
+mongoose:use to connect to database 
+cors: use to max our backend side to frontend
+nodemon: use tp refresh our serve when ever we make a changes in it
+
+npm install express mongoose cors nodemon
+
+6. creat new file in server name index.js to write out api
+
+7. in package.json file after
+    test write  =>"start":"nodemon index.js"
+8. npm start: to starte server
+
+9. come to client side;
+ in app.jsx file import bootstrap:import 'bootstrap/dist/css/bootstrap.min.css'
+
+10. create form using bootstrap and import signup.jsx in in app.jsx:  <Signup/>
+
+
+NOW CREATE ROUTING
+
+11. remove  <Signup/> and  import react router don
+   =>import {BroswerRouter, Routers, Route} from 'react-router-dom'
+12. do this
+     return (
+    <BroswerRouter>
+      <Routers>
+        <Route>
+
+        </Route>
+      </Routers>
+    </BroswerRouter>
+
+  )
+13. to jump on a login page add  : to="/login"  in the link
+                <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">Login</Link>
+     now press the login button and see it will work 
+
+14. for storing data like name email password we need some to thinge to store so will create that
+   go to singup page and add usestate hookes
+   
+
+15.add usestate hook in signup 
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+
+16.and input onchange function in input filed :onChange={(e)=> setName(e.target.value)}
+
+17. when ever we are clicking on register button we have to store data so for that we have to do <form onSubmit={handleSubmit}>
+
+18.now creat handlesubmit function
+       const handleSubmit=(e)=>{
+        e.preventDefault()
+        axios.post('',name,email,password)
+        .then(result=> console.log(result))
+        .then(err=> console.log(err))
+
+    }
+19.import axios from 'axios'
+
+20.open mongodb and create databas 
+21.go to server side in code and write boiler code
+  server->index.js->
+     const express = require("express")
+const mongoos = require("mongoos")
+const cors = require("cors")
+
+const app = express()
+app.use(express.json())
+app.use(cors())
+
+23.connect to mondodb:mongoos.connect("mongodb://127.0.0.1:27017/employee")
+
+24.assign port number: app.listen(3001,() =>{
+     console.log("serveer is running")
+       }) 
+25.go to signup page and add url: axios.post('http://localhost:3001/register',name,email,password)
+
+26.now create register route
+
+27.creat request and response function in indexfile : app.post('/register',(req,res)=>{
+    
+})
+req means: bringing data from back end
+res means:sending data from front end to backend
+
+28. create a folder in serverside name models and creat file name employee.js
+29.in employee.js page create schemas
+30.and export module 
+31 import inside  index.js
+   const EmployeeModel = require("./models/Employee")
+32.then add employe model in
+    app.post('/register',(req,res)=>{
+    EmployeeModel.create(req.body)
+
+})
+33.do it same in login page and 
+34. in index.js give login function aap.post
+35.create new component 
+36.give route in app.jsx
+
+37.for giving authorization security for password follow given steps
+in server side
+    npm install bcrypt
+38. in server index.js file import  bcrypt
+    const bcrypt =require('bcrypt' 
+39.when ever we are creating account we should hash the password so we are going to do that now
+40.in register function api add:app.post("/register", (req, res) => {
+  const {name,email,password} = req.body
+  bcrypt.hash(password,10)
+  .then(hash=>{
+    EmployeeModel.create({name ,email,password: hash})
+    .then((employees) => res.json(employees))
+    .catch((err) => res.json(err));
+
+  }).catch(err=>console.log(err.message))
+
+});
+
+-***********************************************************************************
+40.first code:for adding password in mongodb:app.post("/register", (req, res) => {
+  EmployeeModel.create(req.body)
+    .then((employees) => res.json(employees))
+    .catch((err) => res.json(err));
+});
+
+**********************************************************************
+in index.js
+
+41. next go to login api: will do bcrypt compare.will redirect to home page
+
+
+--------------//////////////////////--------------------------
+42.jwt authentication :jsonweb token:
+cd server 
+npm install jsonwebtoken
+43.in index.js import =>const jwt = require('jsonwebtoken')
+const cookieparser = require('cookie-parser')
+
+44.app.use(cookieparser())
+45. now we are creating token for login IN RESPONSE => const token = jwt.sign({email:user.email},"jwt-secret-key",{expiresIn:"1d"}) wAy of generating the token
+46.we are assigning and storing in cookies  =>res.cookie("token",token);
+
+
+
+module -4
+
+
+ 
+	
+
+
+
+
+
